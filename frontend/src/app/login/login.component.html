@@ -1,0 +1,48 @@
+<section class="login-card">
+  <header>
+    <h1>Welcome back</h1>
+    <p class="subhead">Sign in to access your dashboard.</p>
+  </header>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        [class.invalid]="isInvalid('email')"
+        placeholder="you@example.com"
+      />
+      <p class="helper" *ngIf="isInvalid('email')">
+        {{ controls.email.errors?.required ? 'Email is required.' : 'Please provide a valid email address.' }}
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        [class.invalid]="isInvalid('password')"
+        placeholder="At least 6 characters"
+      />
+      <p class="helper" *ngIf="isInvalid('password')">
+        {{ controls.password.errors?.required ? 'Password is required.' : 'Use at least 6 characters.' }}
+      </p>
+    </div>
+
+    <div class="form-row">
+      <label class="checkbox">
+        <input type="checkbox" formControlName="rememberMe" />
+        Keep me signed in
+      </label>
+      <a class="light-link" href="#">Forgot password?</a>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Sign in</button>
+  </form>
+
+  <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+</section>
