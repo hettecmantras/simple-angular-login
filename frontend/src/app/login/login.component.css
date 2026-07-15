@@ -1,0 +1,110 @@
+.login-card {
+  width: min(420px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 60px 120px rgba(15, 23, 42, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-card header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subhead {
+  margin: 0;
+  color: #5f6372;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-weight: 600;
+  color: #2b2e3a;
+}
+
+input {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #dfe3f0;
+  font-size: 1rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4854ed;
+  box-shadow: 0 0 0 3px rgba(72, 84, 237, 0.18);
+}
+
+input.invalid {
+  border-color: #e53f3f;
+}
+
+.helper {
+  color: #e53f3f;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.light-link {
+  color: #4854ed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(90deg, #4f5bf5, #6c9ffd);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.success {
+  margin: 0;
+  color: #1f8a3a;
+  font-weight: 600;
+}
+
+.error {
+  margin: 0;
+  color: #e53f3f;
+  font-weight: 600;
+}
